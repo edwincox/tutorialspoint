@@ -25,6 +25,9 @@ public class PageHitCounter extends HttpServlet{
         // increment hitCount
         hitCount++;
         PrintWriter out = response.getWriter();
+
+        // URL om te get
+        // http://192.168.0.67:8181/tutorialspoint-1.0-SNAPSHOT/PageHitCounter
         String title = "Total Number of Hits";
         String docType =
                 "<!doctype html public \"-//w3c//dtd html 4.0 " +
