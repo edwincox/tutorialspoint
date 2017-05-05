@@ -9,4 +9,14 @@
         <servlet-name>PageHitCounter</servlet-name>
         <url-pattern>/PageHitCounter</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>addUser</servlet-name>
+        <servlet-class>addUser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>addUser</servlet-name>
+        <url-pattern>/addUser</url-pattern>
+    </servlet-mapping>
 </web-app>
