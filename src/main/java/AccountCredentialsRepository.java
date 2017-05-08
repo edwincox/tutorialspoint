@@ -14,7 +14,22 @@ public class AccountCredentialsRepository {
     }
 
     public Person getAccountForUser(int number){
-       return database.get(number);
+
+        // wanneer user niet bestaat (het nummer niet aanwezig is in de list) afvangen
+        Person waardeOpgehaaltUitDeGetHashmap = null;
+        waardeOpgehaaltUitDeGetHashmap = database.get(number);
+
+        if (waardeOpgehaaltUitDeGetHashmap == null){
+            System.out.println("Opgeven number: " + number + "bestaat niet in Hashmap");
+            throw new NullPointerException("Dit gaat helemaal fout");
+        }
+//        try{
+//
+//            return waardeOpgehaaltUitDeGetHashmap;
+//        }catch (NullPointerException e){
+//        }
+
+        return waardeOpgehaaltUitDeGetHashmap;
     }
 
     public int getUniqueNumberForCreateAccount(){

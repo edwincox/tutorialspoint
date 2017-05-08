@@ -3,14 +3,15 @@ public class run {
 
     public static void main(String[] args) {
 
-        Person object = new Person("tien", "voortwaalef");
-//        //PersonRepository voet = new PersonRepository();
-//
-//        voet.addUser(object);
-//
-//        Person persoon = voet.getUser(22);
-//        String voornaam = persoon.getVoornaam();
-//        System.out.println("Voornaam = " + voornaam);
+        String voornaam = "Fred";
+        String achternaam = "Willems";
+
+        PersonRepository personRepository = new PersonRepository();
+        personRepository.addUser(voornaam, achternaam);
+
+        Person object = personRepository.getUser(2);
+
+        System.out.println(object.getVoornaam());
 
     }
 
