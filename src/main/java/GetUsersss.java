@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Getuser extends HttpServlet {
+public class GetUsersss extends HttpServlet {
 
 
     public void doGet(HttpServletRequest request,

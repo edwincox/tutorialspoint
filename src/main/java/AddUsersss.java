@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Adduser extends HttpServlet {
+public class AddUsersss extends HttpServlet {
 
     private int hitCount;
 
@@ -41,7 +41,7 @@ public class Adduser extends HttpServlet {
         personRepository.addUser(voornaam, achternaam);
 
         //Person tijdelijk = new Person(hitCount, voornaam, achternaam);
-//        personRepository.addUser(tijdelijk);
+//        personRepository.AddUsersss(tijdelijk);
 //        int getall = personRepository.sizeAantal();
 
 
