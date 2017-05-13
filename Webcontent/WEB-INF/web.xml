@@ -20,19 +20,23 @@
         <servlet-name>Adduser</servlet-name>
         <servlet-class>Adduser</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Adduser</servlet-name>
         <url-pattern>/Adduser</url-pattern>
     </servlet-mapping>
-
     <servlet>
         <servlet-name>Getuser</servlet-name>
         <servlet-class>Getuser</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>Getuser</servlet-name>
         <url-pattern>/Getuser</url-pattern>
     </servlet-mapping>
+
+    <!-- Error exception type definition -->
+    <error-page>
+        <exception-type>java.lang.NullPointerException</exception-type>
+        <location>/index.html</location>
+    </error-page>
+    
 </web-app>

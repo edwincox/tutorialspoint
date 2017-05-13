@@ -15,21 +15,26 @@ public class AccountCredentialsRepository {
 
     public Person getAccountForUser(int number){
 
-        // wanneer user niet bestaat (het nummer niet aanwezig is in de list) afvangen
-        Person waardeOpgehaaltUitDeGetHashmap = null;
-        waardeOpgehaaltUitDeGetHashmap = database.get(number);
+        Person waardeOpgehaaltUitDeGetHashmap = database.get(number);
 
-        if (waardeOpgehaaltUitDeGetHashmap == null){
-            System.out.println("Opgeven number: " + number + "bestaat niet in Hashmap");
-            throw new NullPointerException("Dit gaat helemaal fout");
-        }
-//        try{
+//        if(waardeOpgehaaltUitDeGetHashmap == null){
 //
-//            return waardeOpgehaaltUitDeGetHashmap;
-//        }catch (NullPointerException e){
+//            return null;
 //        }
 
-        return waardeOpgehaaltUitDeGetHashmap;
+
+        try{
+            return waardeOpgehaaltUitDeGetHashmap;
+        }catch(NullPointerException e) {
+
+        }finally{
+            return waardeOpgehaaltUitDeGetHashmap;
+
+        }
+
+//        if(waardeOpgehaaltUitDeGetHashmap == null){
+//            throw new IllegalArgumentException("Books 123 cannot be null");
+//        }
     }
 
     public int getUniqueNumberForCreateAccount(){
