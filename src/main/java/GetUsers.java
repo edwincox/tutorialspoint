@@ -19,13 +19,21 @@ public class GetUsers extends HttpServlet {
         PrintWriter out = response.getWriter();
         int number = Integer.parseInt(request.getParameter("number"));
 
+
+
+
         // Maak een object aan
         PersonRepository personRepository = new PersonRepository();
-        Person object = personRepository.getUser(number);
-        String voormij = object.getVoornaam();
+
+        //String voormij = object.getVoornaam();
+
+
+
 
 
         try{
+            Person object = personRepository.getUser(number);
+            String voormij = object.getVoornaam();
             // Gebruik dispatser voor verwijzen naar pagina dat de credentails niet goed zijn
             String title = "Gaat fout error";
             String docType =
@@ -57,7 +65,7 @@ public class GetUsers extends HttpServlet {
                     "<h1 align=\"center\">" + title + "</h1>\n" +
                     "<h2 align=\"center\"> "
                     + "Nummer int uit interger parseint: " + number + "<br><br>"
-                    + "terug van object voornaam: " + voormij + "<br><br>"
+                    + "terug van object voornaam: " + "df" + "<br><br>"
                     + "Object opgehaald: " + "Ongeldig"  + "<br><br>"
                     + "</h2>\n" +
                     "</body></html>");
