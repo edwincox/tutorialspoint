@@ -15,26 +15,12 @@ public class AccountCredentialsRepository {
 
     public Person getAccountForUser(int number){
 
-        Person waardeOpgehaaltUitDeGetHashmap = database.get(number);
-
-//        if(waardeOpgehaaltUitDeGetHashmap == null){
-//
-//            return null;
-//        }
-
-
-        try{
-            return waardeOpgehaaltUitDeGetHashmap;
-        }catch(NullPointerException e) {
-
-        }finally{
-            return waardeOpgehaaltUitDeGetHashmap;
-
+        if(database.containsKey(number)){
+            return database.get(number);
         }
 
-//        if(waardeOpgehaaltUitDeGetHashmap == null){
-//            throw new IllegalArgumentException("Books 123 cannot be null");
-//        }
+        return null;
+
     }
 
     public int getUniqueNumberForCreateAccount(){

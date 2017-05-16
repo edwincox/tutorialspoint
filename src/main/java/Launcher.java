@@ -1,5 +1,4 @@
-public class run {
-
+public class Launcher {
 
     public static void main(String[] args) {
 
@@ -10,6 +9,7 @@ public class run {
         personRepository.addUser(voornaam, achternaam);
 
         Person object = personRepository.getUser(2);
+        //Person object = null;
 
         System.out.println(object.getVoornaam());
 
