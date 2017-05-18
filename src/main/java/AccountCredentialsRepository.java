@@ -18,9 +18,7 @@ public class AccountCredentialsRepository {
         if(database.containsKey(number)){
             return database.get(number);
         }
-
         return null;
-
     }
 
     public int getUniqueNumberForCreateAccount(){
